@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.subscribe-btn{
+    @apply bg-yellow-400 py-2 font-serif hover:bg-green-400 hover:text-white hover:outline hover:outline-offset-1
+}
+

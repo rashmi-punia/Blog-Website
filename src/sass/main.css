@@ -1,0 +1,45 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+}
+.footer form label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.footer form input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.footer form button {
+  padding: 10px;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.footer form button:hover {
+  background-color: #d19c0b;
+}
+.footer p {
+  font-size: 16px;
+  margin: 10px 0;
+}/*# sourceMappingURL=main.css.map */

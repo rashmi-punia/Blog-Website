@@ -1,0 +1,12 @@
+{
+    "overrides": [
+      {
+        "files": ["*.jsx"],
+        "options": {
+          "parser": "babel"
+         
+        }
+      }
+    ]
+  }
+  
