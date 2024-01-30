@@ -40,10 +40,7 @@ export default function Navbar() {
           <button className="subscribe-btn px-2 ">Subscribe now</button>
         </div>
       </nav>
-      {/* <div className="slider">
-            <img src=""></img> */}
-
-      {/* </div> */}
+    
 
       <Show />
     </>

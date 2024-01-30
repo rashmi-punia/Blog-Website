@@ -1,9 +1,9 @@
-// import "./sass/main.css";
+
 import Navbar from "./Blog_components/header";
 import Footer from "./Blog_components/footer";
 import Blog from "./Blog_components/Card";
 // import Testimonials from "./Testimonial"
-// import loremIpsum from 'lorem-ipsum';
+
 
 const blogData = [
   {
