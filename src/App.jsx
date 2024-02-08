@@ -2,6 +2,7 @@
 import Navbar from "./Blog_components/header";
 import Footer from "./Blog_components/footer";
 import Blog from "./Blog_components/Card";
+import Dialogue from "./Blog_components/dialogue";
 // import Testimonials from "./Testimonial"
 
 
@@ -13,6 +14,7 @@ const blogData = [
       "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.",
     imagePath: "https://source.unsplash.com/random/couples",
     category: "react",
+    
   },
   {
     id: 2,
@@ -66,6 +68,7 @@ export default function App() {
       <Navbar />
       <Blog data={blogData} />
       {/* <Testimonials reviews={testimonial} /> */}
+      <Dialogue />
       <Footer />
     </>
   );

@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import MyLottieAnimation from "./ani";
 
-const Blog = ({ data }) => (
+const Blog = ({ data }) => {
+
+  const [isExpanded,setIsExpanded] =useState(false)
+  const [idNumber,setIdNumber] = useState()
+
+  const toggleExpand=(key)=>{
+    setIsExpanded(!isExpanded)
+    setIdNumber(key)
+  }
+  return(
+
   <>
+
     <h1 className="mt-10 text-center text-2xl font-serif font-bold p-1 my-blog">
       My Blogs
     </h1>
@@ -11,13 +22,15 @@ const Blog = ({ data }) => (
       <div className="flex flex-wrap m-4">
         
         {data.map((blog) => (
-          <div className="p-4 md:w-1/2 lg:w-1/3">
+  
+
+          <div className="p-4 w-full md:w-1/2 lg:w-1/3">
             <div
               key={blog.id}
               className="blog-entry shadow-sm h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
             >
               <img
-                className="h-60 lg:h-96 md:h-64 w-full object-cover object-center hover:transition-transform hover:scale-105"
+                className="h-52 lg:h-96 md:h-64 w-full object-cover object-center hover:transition-transform hover:scale-105"
                 src={blog.imagePath}
                 alt="{blog.title}"
                 width=""
@@ -31,10 +44,10 @@ const Blog = ({ data }) => (
                 <h1 className=" text-lg font-medium text-gray-900 mb-3 capitalize">
                   {blog.title}
                 </h1>
-                <p className="leading-relaxed mb-3">{blog.content}</p>
+                <p className="leading-relaxed mb-3">{isExpanded && idNumber===blog.id ? (blog.content) : blog.content.slice(0,100) + "...."}</p>
                 <div className="flex items-center flex-wrap">
-                  <button className="read-more py-3 text-blue-500 hover:bg-blue-200 px-2  inline-flex items-center md:mb-2 lg:mb-0">
-                    Read More <i class="fa-solid fa-arrow-right ml-2"></i>
+                  <button onClick={()=>toggleExpand(blog.id)} className="read-more py-3 text-blue-500 hover:bg-blue-200 px-2  inline-flex items-center md:mb-2 lg:mb-0">
+                   {isExpanded && idNumber===blog.id  ? 'Read less' : 'Read more'} <i class="fa-solid fa-arrow-right ml-2"></i>
                   </button>
 
                   {/* <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
@@ -59,6 +72,7 @@ const Blog = ({ data }) => (
 
     <MyLottieAnimation />
   </>
-);
+  )
+                  };
 
 export default Blog;

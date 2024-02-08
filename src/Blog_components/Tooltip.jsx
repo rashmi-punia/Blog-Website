@@ -10,7 +10,7 @@ export default function Tooltip({text,children}){
 
         >
         {children}
-        {isVisible && <div className="tooltip absolute top-5 left-2 translate-y-3 bg-black bg-opacity-80 text-xs p-1 z-20 min-w-28  ">{text}</div>}
+        {isVisible && <div className="tooltip absolute top-5 left-2 translate-y-3 bg-black bg-opacity-80 text-xs p-1 z-20 min-w-28 text-white ">{text}</div>}
 
         </div>
     )
